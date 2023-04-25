@@ -1,0 +1,52 @@
+// "FAÇA UM ALGORITMO QUE DEFINA A QUANTIA DE ALUNOS QUE RECEBERÃO AS NOTAS, E IMPRIMA A SUA SITUAÇÃO APÓS O CÁLCULO DE MÉDIA"
+
+
+package testes;
+import java.util.Scanner;
+
+public class Testes {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int numAlunos = 0;
+        double nota1, nota2, nota3, nota4, media;
+        
+        System.out.print("Digite o número de alunos a serem classificados: ");
+        numAlunos = input.nextInt();
+        
+        for(int i=1; i<=numAlunos; i++) {
+            System.out.printf("\nAluno %d:\n", i);
+            System.out.print("Digite a primeira nota: ");
+            nota1 = input.nextDouble();
+            System.out.print("Digite a segunda nota: ");
+            nota2 = input.nextDouble();
+            System.out.print("Digite a terceira nota: ");
+            nota3 = input.nextDouble();
+            System.out.print("Digite a quarta nota: ");
+            nota4 = input.nextDouble();
+            
+            media = (nota1 + nota2 + nota3 + nota4) / 4.0;
+            System.out.printf("Média: %.2f\n", media);
+            
+            if(media >= 90.0 && media <= 100.0) {
+                System.out.println("Classificação: Excelente");
+            }
+            else if(media >= 80.0 && media < 90.0) {
+                System.out.println("Classificação: Ótimo");
+            }
+            else if(media >= 60.0 && media < 80.0) {
+                System.out.println("Classificação: Regular");
+            }
+            else if(media >= 40.0 && media < 60.0) {
+                System.out.println("Classificação: Atenção");
+            }
+            else {
+                System.out.println("Classificação: Reprovado");
+            }
+        }
+        
+        input.close();
+    }
+
+}
