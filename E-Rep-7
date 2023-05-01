@@ -1,0 +1,23 @@
+package atividades;
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    double[] notas = new double[5];
+    double maiorNota = Double.MIN_VALUE;
+    double menorNota = Double.MAX_VALUE;
+
+    for(int i = 0; i < notas.length; i++) {
+      System.out.printf("Digite a nota do aluno %d: ", i+1);
+      notas[i] = scanner.nextDouble();
+      if(notas[i] > maiorNota) {
+        maiorNota = notas[i];
+      }
+      if(notas[i] < menorNota) {
+        menorNota = notas[i];
+      }
+    }
+    System.out.printf("A maior nota é %.2f e a menor nota é %.2f", maiorNota, menorNota);
+    scanner.close();
+  }
+}
