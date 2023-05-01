@@ -1,0 +1,19 @@
+
+package atividades;
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+          Scanner input = new Scanner(System.in);
+        double soma = 0;
+
+        System.out.println("Informe as temperaturas coletadas nos 10 primeiros dias de janeiro de 2021 em Belo Horizonte:");
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Temperatura do dia " + i + ": ");
+            double temperatura = input.nextDouble();
+            soma += temperatura;
+        }
+
+        double media = soma / 10;
+        System.out.printf("A média das temperaturas coletadas é %.2f graus Celsius.", media);
+    }
+}
