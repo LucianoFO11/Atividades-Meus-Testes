@@ -1,0 +1,37 @@
+package atividades;
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+        int numFilhos = 0;
+        double salario = 0;
+        double somaSalarios = 0;
+        double somaFilhos = 0;
+        int numPessoas = 0;
+
+        while (true) {
+            System.out.print("Digite o salário (ou um valor negativo para encerrar): ");
+            salario = sc.nextDouble();
+            if (salario < 0) {
+                break;
+            }
+            System.out.print("Digite o número de filhos: ");
+            numFilhos = sc.nextInt();
+
+            somaSalarios += salario;
+            somaFilhos += numFilhos;
+            numPessoas++;
+        }
+
+        if (numPessoas == 0) {
+            System.out.println("Nenhum dado foi informado.");
+        } else {
+            double mediaSalarios = somaSalarios / numPessoas;
+            double mediaFilhos = somaFilhos / numPessoas;
+            System.out.printf("Média do salário da população: R$ %.2f%n", mediaSalarios);
+            System.out.printf("Média do número de filhos: %.2f%n", mediaFilhos);
+        }
+        sc.close();
+    }
+}
+    
