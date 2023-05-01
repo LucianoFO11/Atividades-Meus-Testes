@@ -1,0 +1,28 @@
+
+package atividades;
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        int homensPesoMedio = 0; // contador de homens com peso entre 60 e 80 kg
+        int mulheresPesoMedio = 0; // contador de mulheres com peso entre 50 e 70 kg
+
+        for (int i = 1; i <= 10; i++) { // loop de 10 iterações para ler os dados das 10 pessoas
+            System.out.println("Informe o sexo (M/F) da pessoa " + i + ":");
+            char sexo = scanner.next().charAt(0);
+
+            System.out.println("Informe o peso da pessoa " + i + " em kg:");
+            double peso = scanner.nextDouble();
+
+            if (sexo == 'M' && peso >= 60 && peso <= 80) {
+                homensPesoMedio++; // incrementa contador de homens com peso entre 60 e 80 kg
+            } else if (sexo == 'F' && peso >= 50 && peso <= 70) {
+                mulheresPesoMedio++; // incrementa contador de mulheres com peso entre 50 e 70 kg
+            }
+        }
+
+        System.out.println("Quantidade de homens com peso entre 60 e 80 kg: " + homensPesoMedio);
+        System.out.println("Quantidade de mulheres com peso entre 50 e 70 kg: " + mulheresPesoMedio);
+    }
+}
