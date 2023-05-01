@@ -1,0 +1,22 @@
+
+package atividades;
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int numero = sc.nextInt();
+        int contador = 1;
+
+        System.out.print("Números ímpares até " + numero + ": ");
+        while (contador <= numero) {
+            if (contador % 2 != 0) {
+                System.out.print(contador + " ");
+            }
+            contador++;
+        }
+
+        sc.close();
+    }
+}
